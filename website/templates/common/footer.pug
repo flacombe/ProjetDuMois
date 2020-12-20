@@ -1,12 +1,17 @@
 p= __("Copyright 2024-2025 Podoma - Released under AGPL 3.0 license")
 div.container.text-left
 	div.row
-		div.col-12.col-md-6.mb-2
+		div.col-sm.mb-2
 			a(href="https://openstreetmap.fr/" target="_blank")
 				| #{__("Supported by")}
 				img.d-block(src="/images/osmfr.svg" alt="OpenStreetMap France" style="max-height: 70px; max-width: 100%")
 
-		div.col-12.col-md-6.mb-2
+		div.col-sm.mb-2
 			a(href="https://digitalprinciples.org/" target="_blank")
-				| #{__("Adheres to")}
+				#{__("Adheres to")}
 				img.d-block(src="/images/pdd.png" alt=__("Principles for digital development") style="max-height: 70px; max-width: 100%")
+
+		div.col-sm.mb-2
+			a(href="https://www.enedis.fr/" target="_blank")
+				| Relatif à une convention avec
+				img.d-block(src="/images/enedis.png" alt="Logo Enedis" style="max-height: 70px; max-width: 100%")

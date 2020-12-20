@@ -1,0 +1,128 @@
+{
+	"id": 1,
+	"name": "2021-01_poteaux",
+	"title": "Poteaux électriques",
+	"start_date": "2020-10-01",
+	"end_date": null,
+	"summary": "Les poteaux électriques supportent plusieurs réseaux aériens utiles, électriques ou de télécommunication. Les repérer présente plusieurs avantages. Leur maintenance et remplacement sera plus aisé ou le déploiement de la fibre optique pourra être plus rapide.",
+	"links": {
+		"osmwiki": "https://wiki.openstreetmap.org/wiki/Power_networks/France#R.C3.A9seaux_de_distribution",
+		"osmblog": null
+	},
+	"database": {
+		"osmium_tag_filter": "n/operator=Enedis&n/power=pole,tower"
+	},
+	"datasources": [
+		{
+			"source": "osm",
+			"name": "Support Enedis dans OSM",
+			"description": "Ce support Enedis existe déjà dans OSM. Vous pouvez compléter ou modifier ses informations si nécessaire.",
+			"tiles": ["https://enedis.openstreetmap.fr/tiles/pdm_project_poteaux/{z}/{x}/{y}.mvt"],
+			"layers": ["pdm_project_poteaux"],
+			"minzoom":7
+		},
+		{
+			"source":"osmose",
+			"item":"8290",
+			"class":"1001,1011,1021,1031,1041,1051,1061,1071,1081",
+			"country":"france*",
+			"name":"Support électrique à intégrer",
+			"buttons": {
+				"done":"Validé",
+				"false":"Rien ici"
+			},
+			"minzoom": 12
+		},
+		{
+			"source": "osm-extra",
+			"name": "Autre support dans OSM",
+			"description": "Un support exploité par un autre acteur existe déjà dans OSM.",
+			"tiles": ["https://enedis.openstreetmap.fr/tiles/pdm_project_poteaux/{z}/{x}/{y}.mvt"],
+			"layers": ["pdm_project_poteaux_eld"],
+			"color": "#636363",
+			"minzoom":9,
+			"maxzoom":15
+		},
+		{
+			"source": "osm-extra",
+			"name": "Support sans exploitant",
+			"description": "Ce support n'a pas d'exploitant connu dans OSM",
+			"tiles": ["https://enedis.openstreetmap.fr/tiles/pdm_project_poteaux/{z}/{x}/{y}.mvt"],
+			"layers": ["pdm_project_poteaux_operator"],
+			"color": "#7948c3",
+			"minzoom":9,
+			"maxzoom":15
+		},
+		{
+			"source": "background",
+			"tiles": [ "https://data.geopf.fr/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=ORTHOIMAGERY.ORTHOPHOTOS&STYLE=normal&FORMAT=image%2Fjpeg&TILEMATRIXSET=PM&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}" ],
+			"name": "IGN BD Ortho",
+			"attribution": "<a href=\"https://geoservices.ign.fr/bdortho\" target=\"_blank\">&copy; IGN BD Ortho</a>"
+		},
+		{
+			"source": "background",
+			"tiles": [ "https://data.geopf.fr/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=PCRS.LAMB93&STYLE=normal&FORMAT=image%2Fjpeg&TILEMATRIXSET=2154_5cm_6_22&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}" ],
+			"name": "PCRS raster",
+			"attribution": "<a href=\"https://geoservices.ign.fr/pcrs\" target=\"_blank\">&copy; PCRS République française</a>"
+		},
+		{
+			"source": "background",
+			"tiles": [ "https://wms.openstreetmap.fr/tms/1.0.0/enedis/{z}/{x}/{y}" ],
+			"name": "Enedis Ortho 5cm",
+			"attribution": "<a href=\"https://www.enedis.fr\" target=\"_blank\">&copy; Orthophotos Enedis</a>"
+		},
+		{
+			"source": "background",
+			"tiles": [ "https://a.tile.openstreetmap.fr/volta/{z}/{x}/{y}.png" ],
+			"name": "Réseaux électriques existants",
+			"attribution": "Données <a href=\"https://www.agenceore.fr/\">Distributeurs contributeurs de l'Agence ORE</a>, <a href=\"https://opendata.reseaux-energies.fr\">RTE France</a> - <a href=\"https://wiki.openstreetmap.org/wiki/FR:Serveurs/tile.openstreetmap.fr#Rendu_.22Volta.22_des_r.C3.A9seaux_.C3.A9lectriques\">Rendu Cquest CC BY-SA</a>"
+		},
+		{
+			"source": "stats",
+			"tiles": ["https://enedis.openstreetmap.fr/tiles/pdm_stats_poteaux/{z}/{x}/{y}.mvt"],
+			"layers": ["pdm_stats_poteaux"],
+			"name": "Statistiques géographiques"
+		}
+	],
+	"statistics": {
+		"count": true,
+		"feature_name": "poteaux",
+		"points": { "add": 3, "edit": 1, "note": 1 },
+		"osmose_tasks": "Poteaux intégrés depuis l'opendata"
+	},
+	"editors": {
+		"all": {
+			"comment": "[Power/France] Ajout de poteaux électriques",
+			"hashtags": "convenedisosmfr,gespot"
+		},
+		"pdm": {
+			"fields": [
+				{ "type": "hidden", "tags": { "power": "pole", "operator": "Enedis" } },
+				{ "type": "text", "name": "Opérateur / gestionnaire", "help": "https://wiki.openstreetmap.org/wiki/Power_networks/France/Exploitants", "tag": "operator", "optional": false },
+				{ "type": "select", "name": "Quel matériau ?", "tag": "material", "optional": true, "values": [
+					{ "v": "wood", "l": "Bois" },
+					{ "v": "concrete", "l": "Béton" },
+					{ "v": "metal", "l": "Métal" },
+					{ "v": "composite", "l": "Composite" }
+				] },
+				{ "type": "select", "name": "Quel armement ?", "tag": "line_attachment", "optional": true, "values": [
+					{ "v": "anchor", "l": "Ancrage" },
+					{ "v": "suspension", "l": "Suspension" },
+					{ "v": "pin", "l": "Supporté" }
+				] },
+				{ "type": "2states", "name": "Transition aéro-souterraine ?", "tag": "location:transition" },
+				{ "type": "textarea", "name": "Autres informations", "tag": "note", "description": "Horaires, modèle, infos pratiques...", "optional": true }
+			],
+			"title": {
+				"add": "Ajoutez un poteau manquant",
+				"edit": "Complétez ce poteau"
+			}
+		},
+		"iD": {
+			"background": "fr.ign.bdortho"
+		}
+	},
+	"opendata": [
+		{ "title": "Extraction locale", "via": "enedis.openstreetmap.fr", "url": "/extracts/poteaux.csv" }
+	]
+}
