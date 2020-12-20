@@ -1,12 +1,12 @@
 {
-	"name": "Projet du Mois",
-	"short_name": "PDM",
+	"name": "Suivi Enedis",
+	"short_name": "enedis",
 	"description": "Catalyseur d'énergies pour OpenStreetMap",
 	"start_url": "/",
 	"display": "standalone",
 	"background_color": "#95DAEC",
 	"lang": "fr",
-	"categories": ["games","navigation"],
+	"categories": ["cartography","technology"],
 	"orientation": "portrait-primary",
 	"icons": [
 		{
