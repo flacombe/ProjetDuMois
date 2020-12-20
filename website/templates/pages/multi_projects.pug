@@ -49,12 +49,5 @@ block prepend footer
 	a#about
 	div.container.text-left
 		div.row
-			div.blog-post.col-md-8
+			div.blog-post.col-md-8.blog-post-readme
 				include:markdown-it ../../../README.md
-			aside.col-md-4.blog-sidebar
-				div.p-4.mb-3.rounded
-					h4.font-italic= __("En savoir plus")
-					ul.list-unstyled.mb-0
-						li: a(href=CONFIG.REPOSITORY_URL rel="noopener")= __("Code source du projet")
-						li: a(href="https://wiki.openstreetmap.org/wiki/FR:Project_of_the_month#Projets_pass.C3.A9s" rel="noopener")= __("Projets précédents")
-						li: a(href="https://openstreetmap.fr" rel="noopener")= __("OpenStreetMap France")

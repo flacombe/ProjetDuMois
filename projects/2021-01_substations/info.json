@@ -1,0 +1,91 @@
+{
+	"id": "2021-01_substations",
+	"title": "Postes de distribution électrique",
+	"start_date": "2020-10-01",
+	"end_date": "2024-01-01",
+	"summary": "Les postes électriques sont des infrastructures importantes et omniprésentes. Leur cartographie dans OSM permet de mieux qualifier le bâti et d'améliorer la connaissance d'un territoire",
+	"links": {
+		"osmwiki": "https://wiki.openstreetmap.org/wiki/FR:Project_of_the_month/postes_electriques",
+		"osmblog": null
+	},
+	"database": {
+		"osmium_tag_filter": "nw/operator=Enedis&nw/power=substation,transformer=distribution"
+	},
+	"datasources": [
+		{
+			"source": "osm",
+			"name": "Postes dans OSM",
+			"description": "Ce poste existe déjà dans OSM. Vous pouvez compléter ou modifier ses informations si nécessaire.",
+			"tiles": ["https://enedis.openstreetmap.fr/tiles/pdm_project_substations/{z}/{x}/{y}.mvt"],
+			"layers": ["pdm_project_substations"],
+			"minZoom":10,
+			"maxZoom":15
+		},
+		{
+			"source":"osmose",
+			"item":"8280",
+			"class":"11",
+			"country":"france*",
+			"name":"Poste électrique à intégrer",
+			"buttons": {
+				"done":"Validé",
+				"false":"Rien ici"
+			},
+			"minZoom": 10,
+			"maxZoom": 17
+		},
+		{
+			"source": "background",
+			"tiles": [ "https://proxy-ign.openstreetmap.fr/94GjiyqD/bdortho/{z}/{x}/{y}.jpg" ],
+			"name": "IGN BD Ortho",
+			"attribution": "<a href=\"https://openstreetmap.fr/bdortho\" target=\"_blank\">&copy; BDOrtho IGN</a>"
+		},
+		{
+			"source": "background",
+			"tiles": [ "https://a.tile.openstreetmap.fr/volta/{z}/{x}/{y}.png" ],
+			"name": "Réseaux électriques existants",
+			"attribution": "Données <a href=\"https://data.enedis.fr\">Enedis</a>, <a href=\"https://www.geredis.fr/Cartographie-et-reseaux\">Gérédis</a>, <a href=\"https://opendata.srd-energies.fr/pages/page-accueil/\">SRD</a> et <a href=\"https://opendata.reseaux-energies.fr\">RTE France</a> - <a href=\"https://wiki.openstreetmap.org/wiki/FR:Serveurs/tile.openstreetmap.fr#Rendu_.22Volta.22_des_r.C3.A9seaux_.C3.A9lectriques\">Rendu Cquest CC BY-SA</a>"
+		},
+		{
+			"source": "stats",
+			"tiles": ["https://enedis.openstreetmap.fr/tiles/pdm_stats_substations/{z}/{x}/{y}.mvt"],
+			"layers": ["pdm_stats_substations"],
+			"name": "Statistiques géographiques"
+		}
+	],
+	"statistics": {
+		"count": true,
+		"feature_name": "postes",
+		"points": { "add": 3, "edit": 1, "note": 1 },
+		"osmose_tasks": "Postes intégrés depuis l'opendata"
+	},
+	"editors": {
+		"all": {
+			"comment": "[Enedis/France] Ajout de postes électriques",
+			"hashtags": "convenedisosmfr"
+		},
+		"pdm": {
+			"fields": [
+				{ "type": "hidden", "tags": { "substation":"minor_distribution" } },
+				{ "type": "text", "name": "Opérateur / gestionnaire (identique sur la commune)", "tag": "operator", "optional": false },
+				{ "type": "select", "name": "Niveau de distribution", "tag": "substation", "optional": false, "values": [
+					{ "v": "distribution", "l": "Sans transformateur" },
+					{ "v": "minor_distribution", "l": "Avec transformateur" }
+				] },
+				{ "type": "text", "name": "Nom", "tag": "name", "optional": true },
+				{ "type": "text", "name": "Référence GDO (INSEE + P1234)", "tag": "ref:FR:gdo", "optional": true },
+				{ "type": "textarea", "name": "Autres informations", "tag": "note", "description": "Horaires, modèle, infos pratiques...", "optional": true }
+			],
+			"title": {
+				"add": "Ajoutez un poste manquant",
+				"edit": "Complétez ce poste"
+			}
+		},
+		"iD": {
+			"background": "fr.ign.bdortho"
+		}
+	},
+	"opendata": [
+		{ "title": "Extraction locale", "via": "enedis.openstreetmap.fr", "url": "/extracts/substations.csv" }
+	]
+}
