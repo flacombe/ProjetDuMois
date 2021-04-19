@@ -42,6 +42,12 @@
 		},
 		{
 			"source": "background",
+			"tiles": [ "https://wms.openstreetmap.fr/tms/1.0.0/enedis/{z}/{x}/{y}" ],
+			"name": "Enedis Ortho 5cm",
+			"attribution": "<a href=\"https://www.enedis.fr\" target=\"_blank\">&copy; Enedis</a>"
+		},
+		{
+			"source": "background",
 			"tiles": [ "https://a.tile.openstreetmap.fr/volta/{z}/{x}/{y}.png" ],
 			"name": "Réseaux électriques existants",
 			"attribution": "Données <a href=\"https://data.enedis.fr\">Enedis</a>, <a href=\"https://www.geredis.fr/Cartographie-et-reseaux\">Gérédis</a>, <a href=\"https://opendata.srd-energies.fr/pages/page-accueil/\">SRD</a> et <a href=\"https://opendata.reseaux-energies.fr\">RTE France</a> - <a href=\"https://wiki.openstreetmap.org/wiki/FR:Serveurs/tile.openstreetmap.fr#Rendu_.22Volta.22_des_r.C3.A9seaux_.C3.A9lectriques\">Rendu Cquest CC BY-SA</a>"
