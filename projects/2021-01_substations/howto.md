@@ -10,6 +10,6 @@ Sur cette thématique nous nous focalisons sur les points suivants :
 Il existe des postes en bâtiment indépendants, sur poteaux, à l'intérieur des immeubles. Vous pouvez consulter [une classification détaillée](https://wiki.openstreetmap.org/wiki/Power_networks/France#Cat.C3.A9gories_de_postes) sur le wiki OSM.
 
 Un [rendu technique particulier, Volta](https://wiki.openstreetmap.org/wiki/FR:Serveurs/tile.openstreetmap.fr#Rendu_.22Volta.22_des_r.C3.A9seaux_.C3.A9lectriques) présente la cartographie des réseaux existants qui n'ont pas forcément été intégré dans OSM.  
-Il s'agit d'une cartographie schématique du réseau qui ne correspond pas à l'emplacement précis des installations. Il faudra s'assurer du bon posititionnement des contrbutions sur des vues aériennes ou relevés terrain sans chercher à rapprocher OSM de cette cartographie d'exploitation. C'est une aide qui permet de détecter facilement des manques sans en donner de position exacte.
+Il s'agit d'une cartographie schématique du réseau qui ne correspond pas à l'emplacement précis des installations. Il faudra s'assurer du bon positionnement des contributions sur des vues aériennes ou relevés terrain sans chercher à rapprocher OSM de cette cartographie d'exploitation. C'est une aide qui permet de détecter facilement des manques sans en donner de position exacte.
 
 Plusieurs sources de données ouvertes que vous pouvez trouver [sur le suivi](https://wiki.openstreetmap.org/wiki/Power_networks/France#R.C3.A9seaux_de_distribution_2) pour chaque exploitant de réseaux de distribution.

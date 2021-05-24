@@ -8,7 +8,7 @@ Ils peuvent être munis d'une référence qu'il conviendra de reporter dans OSM.
 * Indiquer le matériau constitutif du poteau (bois, béton...), en utilisant par exemple l'application [Street Complete](https://wiki.openstreetmap.org/wiki/FR:StreetComplete) sur mobile.
 
 Un [rendu technique particulier, Volta](https://wiki.openstreetmap.org/wiki/FR:Serveurs/tile.openstreetmap.fr#Rendu_.22Volta.22_des_r.C3.A9seaux_.C3.A9lectriques) présente la cartographie des réseaux existants qui n'ont pas forcément été intégré dans OSM.  
-Il s'agit d'une cartographie schématique du réseau qui ne correspond pas à l'emplacement précis des installations. Il faudra s'assurer du bon posititionnement des contrbutions sur des vues aériennes ou relevés terrain sans chercher à rapprocher OSM de cette cartographie d'exploitation. C'est une aide qui permet de détecter facilement des manques sans en donner de position exacte.
+Il s'agit d'une cartographie schématique du réseau qui ne correspond pas à l'emplacement précis des installations. Il faudra s'assurer du bon positionnement des contributions sur des vues aériennes ou relevés terrain sans chercher à rapprocher OSM de cette cartographie d'exploitation. C'est une aide qui permet de détecter facilement des manques sans en donner de position exacte.
 
 Plusieurs sources de données ouvertes que vous pouvez trouver [sur le suivi](https://wiki.openstreetmap.org/wiki/Power_networks/France#R.C3.A9seaux_de_distribution_2) pour chaque exploitant de réseaux de distribution.
 
