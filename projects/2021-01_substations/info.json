@@ -72,14 +72,15 @@
 		},
 		"pdm": {
 			"fields": [
-				{ "type": "hidden", "tags": { "substation":"minor_distribution" } },
-				{ "type": "text", "name": "Opérateur / gestionnaire (identique sur la commune)", "tag": "operator", "optional": false },
+				{ "type": "hidden", "tags": { "power":"substation", "substation":"minor_distribution", "voltage":20000 } },
+				{ "type": "text", "name": "Opérateur / gestionnaire (déterminé par la commune)", "tag": "operator", "optional": false },
 				{ "type": "select", "name": "Niveau de distribution", "tag": "substation", "optional": false, "values": [
 					{ "v": "distribution", "l": "Sans transformateur" },
 					{ "v": "minor_distribution", "l": "Avec transformateur" }
 				] },
 				{ "type": "text", "name": "Nom", "tag": "name", "optional": true },
 				{ "type": "text", "name": "Référence GDO (INSEE + P1234)", "tag": "ref:FR:gdo", "optional": true },
+				{ "type": "text", "name": "Tension max", "tag": "voltage", "optional": true },
 				{ "type": "textarea", "name": "Autres informations", "tag": "note", "description": "Horaires, modèle, infos pratiques...", "optional": true }
 			],
 			"title": {
