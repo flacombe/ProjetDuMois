@@ -54,13 +54,13 @@
 	},
 	"editors": {
 		"all": {
-			"comment": "[Enedis/France] Ajout de poteaux électriques",
+			"comment": "[Power/France] Ajout de poteaux électriques",
 			"hashtags": "convenedisosmfr,gespot"
 		},
 		"pdm": {
 			"fields": [
 				{ "type": "hidden", "tags": { "power": "pole", "operator": "Enedis" } },
-				{ "type": "text", "name": "Opérateur / gestionnaire (identique sur la commune)", "tag": "operator", "optional": false },
+				{ "type": "text", "name": "Opérateur / gestionnaire (déterminé par la commune)", "tag": "operator", "optional": false },
 				{ "type": "select", "name": "Quel matériau ?", "tag": "material", "optional": true, "values": [
 					{ "v": "wood", "l": "Bois" },
 					{ "v": "concrete", "l": "Béton" },
