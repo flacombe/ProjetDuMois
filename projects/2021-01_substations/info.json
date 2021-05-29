@@ -80,7 +80,7 @@
 				] },
 				{ "type": "text", "name": "Nom", "tag": "name", "optional": true },
 				{ "type": "text", "name": "Référence GDO (INSEE + P1234)", "tag": "ref:FR:gdo", "optional": true },
-				{ "type": "text", "name": "Tension max", "tag": "voltage", "optional": true },
+				{ "type": "text", "name": "Tension max (habituellement 20000)", "tag": "voltage", "optional": true },
 				{ "type": "textarea", "name": "Autres informations", "tag": "note", "description": "Horaires, modèle, infos pratiques...", "optional": true }
 			],
 			"title": {
