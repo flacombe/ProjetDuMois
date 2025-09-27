@@ -2,14 +2,14 @@
 	"id": "2021-01_substations",
 	"title": "Postes de distribution électrique",
 	"start_date": "2020-10-01",
-	"end_date": "2024-01-01",
+	"end_date": null,
 	"summary": "Les postes électriques sont des infrastructures importantes et omniprésentes. Leur cartographie dans OSM permet de mieux qualifier le bâti et d'améliorer la connaissance d'un territoire",
 	"links": {
 		"osmwiki": "https://wiki.openstreetmap.org/wiki/FR:Project_of_the_month/postes_electriques",
 		"osmblog": null
 	},
 	"database": {
-		"osmium_tag_filter": "nw/operator=Enedis&nw/power=substation,substation=minor_distribution"
+		"osmium_tag_filter": "nw/operator=Enedis&nw/power=substation&nw/substation=minor_distribution"
 	},
 	"datasources": [
 		{

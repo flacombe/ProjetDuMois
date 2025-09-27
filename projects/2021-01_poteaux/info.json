@@ -2,7 +2,7 @@
 	"id": "2021-01_poteaux",
 	"title": "Poteaux électriques",
 	"start_date": "2020-10-01",
-	"end_date": "2024-01-01",
+	"end_date": null,
 	"summary": "Les poteaux électriques supportent plusieurs réseaux aériens utiles, électriques ou de télécommunication. Les repérer présente plusieurs avantages. Leur maintenance et remplacement sera plus aisé ou le déploiement de la fibre optique pourra être plus rapide.",
 	"links": {
 		"osmwiki": "https://wiki.openstreetmap.org/wiki/Power_networks/France#R.C3.A9seaux_de_distribution",
