@@ -1,0 +1,61 @@
+{
+	"id": 12,
+	"name": "2018-07_exchanges",
+	"title": "Noeuds de raccordement",
+	"start_date": "2018-07-01",
+	"end_date": null,
+	"summary": "L'inventaire des noeuds de raccordement télécom pour fédérer différentes initiatives locales et compléter la qualification du bâti présent dans OpenStreetMap.",
+	"links": {
+		"osmwiki": "https://wiki.openstreetmap.org/wiki/Telecoms/France"
+	},
+	"database": {
+		"osmium_tag_filter": "nw/telecom=exchange nw/disused:telecom=exchange",
+		"imposm": {
+			"types": ["point", "polygon"],
+			"mapping": { "telecom": ["exchange"] }
+		}
+	},
+	"datasources": [
+		{
+			"source": "osm",
+			"name": "Noeud dans OSM",
+			"description": "Ce noeud de raccordement existe déjà dans OSM. Vous pouvez compléter ou modifier ses informations si nécessaire.",
+			"tiles": ["https://ftth.infos-reseaux.com/tiles/pdm_project_exchanges/{z}/{x}/{y}.mvt"],
+			"layers": ["pdm_project_exchanges"],
+			"minzoom":7,
+			"maxzoom":15
+		},
+		{
+			"source": "background",
+			"tiles": [ "https://wxs.ign.fr/pratique/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=ORTHOIMAGERY.ORTHOPHOTOS&STYLE=normal&TILEMATRIXSET=PM&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}&FORMAT=image%2Fjpeg" ],
+			"name": "Vue aérienne",
+			"icon": "aerial",
+			"attribution": "<a href=\"https://openstreetmap.fr/bdortho\" target=\"_blank\">&copy; BDOrtho IGN</a>"
+		},
+		{
+			"source": "stats",
+			"tiles": ["https://ftth.infos-reseaux.com/tiles/pdm_stats_exchanges/{z}/{x}/{y}.mvt"],
+			"layers": ["pdm_stats_exchanges"],
+			"name": "Statistiques géographiques"
+		}
+	],
+	"statistics": {
+		"count": true,
+		"feature_name": "noeuds de raccordement",
+		"osmose_tasks": "noeuds intégrés",
+		"points": { "add": 3, "edit": 2 }
+	},
+	"editors": {
+		"all": {
+			"comment": "Intégration noeud de raccordement",
+			"hashtags": "ProjetOSMDuMois"
+		},
+		"pdm": false,
+		"iD": {
+			"background": "fr.ign.bdortho"
+		}
+	},
+	"opendata": [
+		{ "title": "Carte des infrastructures dont noeuds de raccordement", "via": "OpenInfraMap", "url": "https://openinframap.org/#15/45.9120/6.1275" }
+	]
+}
