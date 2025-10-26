@@ -28,7 +28,12 @@
 			"icon": "aerial",
 			"attribution": "<a href=\"https://openstreetmap.fr/bdortho\" target=\"_blank\">&copy; BDOrtho IGN</a>"
 		},
-		{ "source": "stats" }
+		{
+			"source": "stats",
+			"tiles": ["https://ftth.infos-reseaux.com/tiles/pdm_stats_exchanges/{z}/{x}/{y}.mvt"],
+			"layers": ["pdm_stats_exchanges"],
+			"name": "Statistiques géographiques"
+		}
 	],
 	"statistics": {
 		"count": true,
