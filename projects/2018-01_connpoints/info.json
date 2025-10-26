@@ -19,7 +19,12 @@
 		{
 			"source": "osm",
 			"name": "SR dans OSM",
-			"description": "Ce sous-répartition existe déjà dans OSM. Vous pouvez compléter ou modifier ses informations si nécessaire."
+			"description": "Ce sous-répartition existe déjà dans OSM. Vous pouvez compléter ou modifier ses informations si nécessaire.",
+			"tiles": ["https://ftth.infos-reseaux.com/tiles/pdm_project_connpoints/{z}/{x}/{y}.mvt"],
+			"layers": ["pdm_project_connpoints"],
+			"color": "#7948c3",
+			"minzoom":9,
+			"maxzoom":15
 		},
 		{
 			"source": "background",

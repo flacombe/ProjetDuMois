@@ -19,7 +19,12 @@
 		{
 			"source": "osm",
 			"name": "Noeud dans OSM",
-			"description": "Ce noeud de raccordement existe déjà dans OSM. Vous pouvez compléter ou modifier ses informations si nécessaire."
+			"description": "Ce noeud de raccordement existe déjà dans OSM. Vous pouvez compléter ou modifier ses informations si nécessaire.",
+			"tiles": ["https://ftth.infos-reseaux.com/tiles/pdm_project_exchanges/{z}/{x}/{y}.mvt"],
+			"layers": ["pdm_project_exchanges"],
+			"color": "#7948c3",
+			"minzoom":9,
+			"maxzoom":15
 		},
 		{
 			"source": "background",
