@@ -9,7 +9,7 @@
 		"osmwiki": "https://wiki.openstreetmap.org/wiki/Telecoms/France"
 	},
 	"database": {
-		"osmium_tag_filter": "nw/telecom=exchange",
+		"osmium_tag_filter": "nw/telecom=exchange nw/disused:telecom=exchange",
 		"imposm": {
 			"types": ["point", "polygon"],
 			"mapping": { "telecom": ["exchange"] }

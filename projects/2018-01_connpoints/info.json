@@ -4,12 +4,12 @@
 	"title": "Sous-répartiteurs",
 	"start_date": "2018-01-01",
 	"end_date": null,
-	"summary": "L'inventaire des sous-répartitions télécom pour fédérer différentes initiatives locales et compléter la qualification du bâti présent dans OpenStreetMap.",
+	"summary": "L'inventaire des sous-répartitions télécom pour qualifier l'accessibilité de la voirie et compléter la qualification du bâti présent dans OpenStreetMap.",
 	"links": {
 		"osmwiki": "https://wiki.openstreetmap.org/wiki/Telecoms/France"
 	},
 	"database": {
-		"osmium_tag_filter": "nw/telecom=connection_point",
+		"osmium_tag_filter": "nw/telecom=connection_point nw/disused:telecom=connection_point",
 		"imposm": {
 			"types": ["point", "polygon"],
 			"mapping": { "telecom": ["connection_point"] }
