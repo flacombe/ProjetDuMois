@@ -1,5 +1,6 @@
 {
-	"id": "2021-01_substations",
+	"id": 2,
+	"name": "2021-01_substations",
 	"title": "Postes de distribution électrique",
 	"start_date": "2020-10-01",
 	"end_date": null,
