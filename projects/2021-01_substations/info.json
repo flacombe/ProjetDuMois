@@ -10,7 +10,7 @@
 		"osmblog": null
 	},
 	"database": {
-		"osmium_tag_filter": "nw/operator=Enedis&nw/power=substation&nw/substation=minor_distribution",
+		"osmium_tag_filter": "nw/operator=Enedis&nw/power=substation,pole,tower&nw/substation=minor_distribution,industrial,distribution,generation",
 		"labels":{
 			"building":"$.building",
 			"cabinet":"$ ? (@.man_made == \"street_cabinet\")",
